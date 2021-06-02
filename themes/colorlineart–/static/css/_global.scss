@@ -1,0 +1,158 @@
+/* sass --watch style.scss:style.css  */
+
+/* ---------- Variables ---------- */
+$m-media: 900px;
+
+/* ----- Global ----- */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+body {
+    background-image: url("../images/background-texture.jpg");
+    background-color: #E8EBB4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ----- Typography ----- */
+h1 {
+    font-size: 60px;
+    position: fixed;
+    z-index: 3;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ----- Bottom Nav----- */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+    position: fixed;
+    font-size: 24px;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E8EBB4;
+        outline: 2px solid black;
+        padding: 20px; 
+        cursor: pointer;
+
+        @media (max-width: $m-media) {
+            width: 50%;
+        }
+    }
+}
+
+/* ----- Index Content ----- */
+#index-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 40vw;
+    height: 100%;
+    background-color: #E8EBB4; 
+    outline: 2px solid black;
+    z-index: 3;
+    overflow: scroll;
+
+    @media (max-width: $m-media) {
+        width: 100vw;
+    }
+
+    .overlay-bg {
+        background-color: black;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 0;
+    }
+
+    .flex-grid-thirds {
+        position: relative;
+        display: flex;
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+        background-color: #E8EBB4; 
+    
+        .col-two {
+            flex-grow: 0.5;
+        }
+    }
+
+    /* ----- Post Content ----- */
+    .nav-post-container {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        .nav-post-image img {
+            width: 20vh;
+
+            @media (max-width: $m-media) {
+                width: 15vh;
+            }
+        }    
+    }
+
+    /* ----- Nav ----- */
+    .topnav,
+    .bottomnav {
+        height: 8vh;
+        width: 40vw;
+        position: fixed;
+        z-index: 4;
+        background-color: #E8EBB4;
+        outline: 2px solid black;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $m-media) {
+            width: 100vw;
+        }
+    }
+
+    .topnav {
+        top: 0;
+
+        #close {
+            position: absolute;
+            right: 20px;
+            top: 2vh;
+            height: 4vh;
+            cursor: pointer;
+        }
+    }
+
+    .bottomnav {
+        bottom: 0;
+    }
+
+    #up-arrow-sm,
+    #down-arrow-sm {
+        height: 5vh;
+    }
+}
+
+
+
+

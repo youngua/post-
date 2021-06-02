@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<link rel="stylesheet" href="{{ `css/style-single.css` | absURL }}">
+
+<div class="single-minji">
+
+    <!-- Weeks Info -->
+    <div class="post-info">
+        <div class="post-title">
+            <h2>{{.Title}}</h2>
+        </div>
+        <div class="post-date">
+            <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
+        </div>
+        <a href="/index.html">
+        <img id="left-arrow" src="/images/up-arrow-left-sm.png"/>
+        </a>
+    </div>
+
+    <!-- Contents -->
+
+    <div class="content-container">
+        {{.Content}}
+    </div>
+
+    <!-- Post Image -->
+    <img class="post-img" src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+
+
+    <!-- bg graphics -->
+    <img id="top-purple" src="/images/top-purple.png" />
+    <img id="bottom-purple" src="/images/bottom-purple.png" />
+     
+</div>
+{{ end}}

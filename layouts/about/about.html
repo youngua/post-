@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+  <link rel="stylesheet" href="{{ `css/style-single.css` | absURL }}">
+
+  <div class="single-about">
+  {{ range (where .Site.RegularPages "Type" "in" .Site.Params.about) }}
+    {{ .Content }}  
+  {{ end }}
+
+  <div class="color-img">
+    <img src="/images/img1-eyes.png" />
+    <img src="/images/img2-birdy.png" />
+    <img src="/images/img3-cat.png" />
+    <img src="/images/img4-seashell.png" />
+    <img src="/images/img5-person.png" />
+  </div>
+
+  <div class="about-img">
+    <img src="/images/about-minji.png" />
+    <img src="/images/about-grace.png" />
+  </div>
+
+  <!-- end of single-about -->
+  </div>
+
+{{ end }}

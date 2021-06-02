@@ -1,0 +1,337 @@
+/* ---------- Imports ---------- */
+/* sass --watch style.scss:style.css  */
+/* ---------- Variables ---------- */
+/* ----- Global ----- */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
+body {
+  background-image: url("../images/background-texture.jpg");
+  background-color: #E8EBB4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ----- Typography ----- */
+h1 {
+  font-size: 60px;
+  position: fixed;
+  z-index: 3;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ----- Bottom Nav----- */
+.bottom-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  position: fixed;
+  font-size: 24px;
+}
+
+.bottom-nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E8EBB4;
+  outline: 2px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .bottom-nav div {
+    width: 50%;
+  }
+}
+
+/* ----- Index Content ----- */
+#index-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 40vw;
+  height: 100%;
+  background-color: #E8EBB4;
+  outline: 2px solid black;
+  z-index: 3;
+  overflow: scroll;
+  /* ----- Post Content ----- */
+  /* ----- Nav ----- */
+}
+
+@media (max-width: 900px) {
+  #index-content {
+    width: 100vw;
+  }
+}
+
+#index-content .overlay-bg {
+  background-color: black;
+  opacity: 50%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+#index-content .flex-grid-thirds {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  background-color: #E8EBB4;
+}
+
+#index-content .flex-grid-thirds .col-two {
+  -webkit-box-flex: 0.5;
+      -ms-flex-positive: 0.5;
+          flex-grow: 0.5;
+}
+
+#index-content .nav-post-container {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#index-content .nav-post-container .nav-post-image img {
+  width: 20vh;
+}
+
+@media (max-width: 900px) {
+  #index-content .nav-post-container .nav-post-image img {
+    width: 15vh;
+  }
+}
+
+#index-content .topnav,
+#index-content .bottomnav {
+  height: 8vh;
+  width: 40vw;
+  position: fixed;
+  z-index: 4;
+  background-color: #E8EBB4;
+  outline: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 900px) {
+  #index-content .topnav,
+  #index-content .bottomnav {
+    width: 100vw;
+  }
+}
+
+#index-content .topnav {
+  top: 0;
+}
+
+#index-content .topnav #close {
+  position: absolute;
+  right: 20px;
+  top: 2vh;
+  height: 4vh;
+  cursor: pointer;
+}
+
+#index-content .bottomnav {
+  bottom: 0;
+}
+
+#index-content #up-arrow-sm,
+#index-content #down-arrow-sm {
+  height: 5vh;
+}
+
+.single-grace {
+  /* ----- Red Graphics ----- */
+  /* ----- Post Image ----- */
+  /* ----- Post Date ----- */
+  /* ----- Post Content ----- */
+}
+
+.single-grace #top-red {
+  position: fixed;
+  top: 0;
+  right: 40vh;
+  width: 30vh;
+  z-index: -1;
+}
+
+.single-grace #bottom-red {
+  position: fixed;
+  bottom: 0;
+  right: 20%;
+  width: 80vh;
+  z-index: -1;
+}
+
+.single-grace .post-img {
+  height: 70%;
+  display: block;
+  position: fixed;
+  right: 15%;
+  top: 15%;
+}
+
+.single-grace .post-info {
+  position: fixed;
+  text-align: center;
+  top: 40%;
+  right: 5%;
+  z-index: 3;
+}
+
+.single-grace #right-arrow {
+  padding-top: 5%;
+  width: 25%;
+}
+
+.single-grace .content-container {
+  position: absolute;
+  width: 25vw;
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+.single-minji {
+  /* ----- Red Graphics ----- */
+  /* ----- Post Image ----- */
+  /* ----- Post Date ----- */
+  /* ----- Post Content ----- */
+}
+
+.single-minji #top-purple {
+  position: fixed;
+  top: -10%;
+  left: 40vh;
+  width: 50vh;
+  z-index: -1;
+}
+
+.single-minji #bottom-purple {
+  position: fixed;
+  bottom: -5%;
+  left: 5%;
+  width: 50vh;
+  z-index: -1;
+}
+
+.single-minji .post-img {
+  height: 70%;
+  display: block;
+  position: fixed;
+  left: 15%;
+  top: 15%;
+}
+
+.single-minji .post-info {
+  position: fixed;
+  text-align: center;
+  top: 40%;
+  left: 5%;
+  z-index: 3;
+}
+
+.single-minji #left-arrow {
+  padding-top: 5%;
+  width: 25%;
+}
+
+.single-minji .content-container {
+  position: absolute;
+  width: 25vw;
+  right: 8%;
+  margin-top: 10%;
+}
+
+.single-about {
+  width: 80vw;
+  padding: 150px;
+  font-size: 40px;
+  line-height: 65px;
+}
+
+.single-about .about-img img {
+  position: relative;
+  margin-top: 60px;
+  margin-right: 60px;
+  width: 20vw;
+}
+
+.single-about .color-img img {
+  position: fixed;
+}
+
+.single-about .color-img img:nth-child(1) {
+  top: 0;
+  right: 25%;
+  width: 10vw;
+}
+
+.single-about .color-img img:nth-child(2) {
+  top: 10%;
+  right: 5%;
+  width: 20vw;
+}
+
+.single-about .color-img img:nth-child(3) {
+  top: 35%;
+  right: 2%;
+  width: 30vw;
+}
+
+.single-about .color-img img:nth-child(4) {
+  top: 60%;
+  right: 0;
+  width: 6vw;
+}
+
+.single-about .color-img img:nth-child(5) {
+  top: 70%;
+  right: 8%;
+  width: 15vw;
+}
+/*# sourceMappingURL=style-single.css.map */

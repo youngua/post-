@@ -1,0 +1,90 @@
+<!-- Bottom nav -->
+<div class="bottom-nav">
+    <div id="index">Index</div>
+    <div id="about"><a href='{{ .Site.Params.about | relURL }}'>About</a></div>
+</div>
+
+<!-- Index Content when toggled -->
+<div id="index-content">
+
+    <div class="overlay-bg"></div>
+
+    <div class="flex-grid-thirds no-gutters">
+
+        <div class="topnav">
+            <img id="close" src="/images/close.png" />
+            <img id="up-arrow-sm" src="/images/up-arrow-sm.png" />
+        </div>
+
+        <div class="bottomnav">
+            <img id="down-arrow-sm" src="/images/down-arrow-sm.png" />
+        </div>
+
+        <div class="col">
+            <!-- Right Post -->
+            {{ range (where .Site.RegularPages "Type" "in" .Site.Params.minji) }}
+                    
+            <!-- posting image from md content -->
+            <div class="nav-post-container">
+                {{ if .Params.image }}
+                <div class="nav-post-image">
+                    <a href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+                    </a>
+                </div>
+                {{ end }} 
+            </div> 
+
+            <!-- end of range pages -->
+            {{ end }}
+  
+        </div>
+
+        <div class="col col-two">
+
+            {{ range (where .Site.RegularPages "Type" "in" .Site.Params.minji) }}
+
+            <div class="nav-post-container">
+                <div class="post-info">
+                    <div class="post-title">
+                        <a href="{{ .RelPermalink }}">
+                        {{ .Title | markdownify }}
+                        </a>
+                    </div>
+                    <div class="post-date">
+                        {{ .Date.Format "Jan 2, 2006" }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+
+        <div class="col">
+            <!-- Right Post -->
+            {{ range (where .Site.RegularPages "Type" "in" .Site.Params.grace) }}
+
+            <!-- posting image from md content -->
+            <div class="nav-post-container">
+                
+                {{ if .Params.image }}
+                <div class="nav-post-image">
+                    <a href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+                    </a>
+                </div>
+                {{ end }} 
+
+            </div> 
+            {{ end }} 
+
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ `js/jquery-3.6.0.min.js` | relURL }}"></script>
+<script src="{{ `js/jquery-ui.min.js` | relURL }}"></script>
+
+<script src="{{ `js/script.js` | relURL }}"></script>
+

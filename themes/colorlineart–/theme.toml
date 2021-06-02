@@ -1,0 +1,13 @@
+name = "Post–"
+license = "MIT"
+licenselink = "https://github.com/graceyoungminjikoo/post–/blob/master/LICENSE"
+description = "A custom hugo theme for our coloring project"
+homepage = "https://github.com/youngua"
+tags = ["blog", "personal"]
+features = ["fun", "pop"]
+min_version = "0.41.0"
+
+authors = [
+  {name = "Grace Young", homepage = "graceyoung.design"},
+  {name = "Minji Koo", homepage = "minjikoo.com"}, 
+]

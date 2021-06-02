@@ -1,0 +1,68 @@
+  {{ define "main" }}
+  
+  {{- partial "weeks.html" . -}}
+
+  <div class="row no-gutters">
+
+         <!-- left side -->
+         <div class="col-md-6 no-gutters">
+            <div class="leftside">
+
+                {{ range (where .Site.RegularPages "Type" "in" .Site.Params.minji) }}
+                    
+
+                <!-- posting image from md content -->
+                <div class="post-container">
+                    {{ if .Params.image }}
+                    <div class="post-image image-right">
+                        <a href="{{ .RelPermalink }}">
+                        <img src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+                        </a>
+                    </div>
+                    {{ end }} 
+                </div> 
+
+                <!-- end of range pages -->
+                {{ end }}
+    
+         
+                <!-- bg graphics -->
+                <img id="top-red" src="../images/top-red.png" />
+                <img id="bottom-red" src="../images/bottom-red.png" />
+                
+            </div> 
+        </div>
+
+            <!-- right side -->
+            <div class="col-md-6 no-gutters">
+
+            
+                <div class="rightside">
+
+                    {{ range (where .Site.RegularPages "Type" "in" .Site.Params.grace) }}
+
+                    <!-- posting image from md content -->
+                    <div class="post-container">
+                        {{ if .Params.image }}
+    
+                        <div class="post-image image-left">
+                            <a href="{{ .RelPermalink }}">
+                            <img src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+                            </a>
+                        </div>
+                        {{ end }} 
+                    </div> 
+    
+                    <!-- end of range pages -->
+                    {{ end }}
+
+                    <!-- bg graphics -->
+                    <img id="top-purple" src="../images/top-purple.png" />
+                    <img id="bottom-purple" src="../images/bottom-purple.png" />
+                </div> 
+        </div>
+    </div>
+
+{{ end }}
+
+ 

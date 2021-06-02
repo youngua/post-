@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "POST–"
+theme = "colorlineart–"
+
+metaDescription = ""
+googleAnalytics = ""
+
+pageNotFoundTitle = "404 – Page not found"
+
+[[menu.main]]
+name = "POST–"
+url = "/"
+weight = 200
+
+[params]
+grace = "grace"
+minji = "minji"
+about = "about"

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        <a href="/index.html">
+            <h1>{{ .Site.Title }}</h1>
+        </a>
+
+        {{ block "main" . }}{{ end }}
+
+        {{- partial "nav.html" . -}}
+    </body>
+</html>

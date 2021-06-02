@@ -1,0 +1,340 @@
+/* ---------- Imports ---------- */
+/* sass --watch style.scss:style.css  */
+/* ---------- Variables ---------- */
+/* ----- Global ----- */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
+body {
+  background-image: url("../images/background-texture.jpg");
+  background-color: #E8EBB4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ----- Typography ----- */
+h1 {
+  font-size: 60px;
+  position: fixed;
+  z-index: 3;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ----- Bottom Nav----- */
+.bottom-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  position: fixed;
+  font-size: 24px;
+}
+
+.bottom-nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E8EBB4;
+  outline: 2px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .bottom-nav div {
+    width: 50%;
+  }
+}
+
+/* ----- Index Content ----- */
+#index-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 40vw;
+  height: 100%;
+  background-color: #E8EBB4;
+  outline: 2px solid black;
+  z-index: 3;
+  overflow: scroll;
+  /* ----- Post Content ----- */
+  /* ----- Nav ----- */
+}
+
+@media (max-width: 900px) {
+  #index-content {
+    width: 100vw;
+  }
+}
+
+#index-content .overlay-bg {
+  background-color: black;
+  opacity: 50%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+#index-content .flex-grid-thirds {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  background-color: #E8EBB4;
+}
+
+#index-content .flex-grid-thirds .col-two {
+  -webkit-box-flex: 0.5;
+      -ms-flex-positive: 0.5;
+          flex-grow: 0.5;
+}
+
+#index-content .nav-post-container {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#index-content .nav-post-container .nav-post-image img {
+  width: 20vh;
+}
+
+@media (max-width: 900px) {
+  #index-content .nav-post-container .nav-post-image img {
+    width: 15vh;
+  }
+}
+
+#index-content .topnav,
+#index-content .bottomnav {
+  height: 8vh;
+  width: 40vw;
+  position: fixed;
+  z-index: 4;
+  background-color: #E8EBB4;
+  outline: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 900px) {
+  #index-content .topnav,
+  #index-content .bottomnav {
+    width: 100vw;
+  }
+}
+
+#index-content .topnav {
+  top: 0;
+}
+
+#index-content .topnav #close {
+  position: absolute;
+  right: 20px;
+  top: 2vh;
+  height: 4vh;
+  cursor: pointer;
+}
+
+#index-content .bottomnav {
+  bottom: 0;
+}
+
+#index-content #up-arrow-sm,
+#index-content #down-arrow-sm {
+  height: 5vh;
+}
+
+/* ----- Weeks Info ----- */
+.weeks {
+  position: fixed;
+  text-align: center;
+  top: 40%;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .weeks {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+#up-arrow,
+#down-arrow {
+  position: fixed;
+  height: 25vh;
+  z-index: 2;
+  display: block;
+  left: 48.9vw;
+}
+
+@media (max-width: 900px) {
+  #up-arrow,
+  #down-arrow {
+    left: 45vw;
+  }
+}
+
+#up-arrow {
+  top: 12%;
+}
+
+#down-arrow {
+  bottom: 24%;
+}
+
+/* ----- Images ----- */
+.post-container {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.post-container .post-image img {
+  width: 60vh;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .post-container .post-image img {
+    width: 50vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .post-container .image-left {
+    margin-left: -200%;
+  }
+  .post-container .image-right {
+    margin-right: -200%;
+  }
+}
+
+/* ----- Split Screen ----- */
+@media (max-width: 900px) {
+  .row {
+    overflow-x: clip;
+  }
+}
+
+@media (max-width: 900px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+.leftside,
+.rightside {
+  height: 100vh;
+  width: 50vw;
+}
+
+.leftside #top-red {
+  position: fixed;
+  top: 0;
+  left: 40vh;
+  width: 30vh;
+  z-index: -1;
+}
+
+@media (max-width: 900px) {
+  .leftside #top-red {
+    display: none;
+  }
+}
+
+.leftside #bottom-red {
+  position: fixed;
+  bottom: 0;
+  left: -1%;
+  width: 80vh;
+  z-index: -1;
+}
+
+@media (max-width: 900px) {
+  .leftside #bottom-red {
+    left: -60%;
+    width: 60vh;
+  }
+}
+
+.rightside #top-purple {
+  position: fixed;
+  top: -50px;
+  right: -50px;
+  width: 50vh;
+  z-index: -1;
+}
+
+@media (max-width: 900px) {
+  .rightside #top-purple {
+    top: 100px;
+    right: -50%;
+    width: 40vh;
+  }
+}
+
+.rightside #bottom-purple {
+  position: fixed;
+  bottom: 0px;
+  right: 10vh;
+  width: 60vh;
+  z-index: -1;
+}
+
+@media (max-width: 900px) {
+  .rightside #bottom-purple {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style-index.css.map */
