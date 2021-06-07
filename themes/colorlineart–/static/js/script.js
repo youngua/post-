@@ -1,39 +1,32 @@
-// $(document).ready(function () {
 
-//     if ($('#post-image > img').visible(true)) {
-
-//         // if this image is in view, show the date
-//         $('#weektitle > h2').text("CHANGE");
-
-//     } else {
-
-//         // if this image is not in view, hide the dates
-//         $('#weektitle > h2').text("BYE");
-//     }
-
-// });
-
-$(document).ready(function () {
-
-    $("#index, #close").click(function () {
-        $("#index-content").toggle("slide", { direction: "left" }, 100);
-    });
-
+// toggles the index slide out nav. 
+$("#index, #close").click(function () {
+    $("#index-content").toggle("slide", { direction: "left" }, 100);
 });
 
-// $("#index").click(function () {
-//     $("#index-content").toggle("slide", { direction: "left" }, 1000);
-// });
+// don't scroll the page when cover page is visible
+$(".cover-page:visible").is(function () {
+    $('body').css('overflow', 'hidden');
+});
 
-// $(function () {
-//     $(window).scroll(function () {
+// open about modal
+$("#about").click('shown', function () {
+    $("#about-content").toggle();
+    $('body').css('overflow', 'hidden');
+});
 
-//         if ($(window).scrollTop() > $('#post-image > img').offset().top
-//             && $(window).scrollTop() < $('#post-image > img').offset().top + $('#post-image > img').outerHeight(true)) {
+// close about modal
+$("#close-about").click('shown', function () {
+    $("#about-content").toggle();
+    $('body').css('overflow', 'auto');
+});
 
-//             $('#weektitle > h2').text('Section 1');
-//         } else {
-//             $('#weektitle > h2').text('Arcade Fire');
-//         }
-//     });
-// });
+// when you hover over single template Week Title & Date, arrow w animate
+$(".post-title").hover(function () {
+    $("#left-arrow").css("animation-name", "bounce-left");
+    $("#right-arrow").css("animation-name", "bounce-right");
+}, function () {
+    $("#left-arrow").css("animation-name", "none");
+    $("#right-arrow").css("animation-name", "none");
+}
+);

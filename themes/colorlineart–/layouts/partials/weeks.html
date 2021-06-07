@@ -2,16 +2,16 @@
 
     <!-- this is posting the title of the markdown content -->
     <div id="weektitle">
-        <h2>
-            <!-- {{ range (where .Site.RegularPages "Type" "in" .Site.Params.grace) }} -->
-            {{ .Title | markdownify }}
-            <!-- {{ end }} -->
-        </h2>
+        <!-- {{ range (where .Site.RegularPages "Type" "in" .Site.Params.grace) }} -->
+        {{ .Title | markdownify }}
+        <!-- {{ end }} -->
     </div>
 
     <!-- this is posting date from md file -->
     <!-- {{ range (where .Site.RegularPages "Type" "in" .Site.Params.grace) }} -->
-    {{ .Date.Format "Jan 2, 2006" }}
+    <div id="weekdate">
+        {{ .Date.Format "Jan 2, 2006" }}
+    </div>
     <!-- {{ end }} -->
 
 </div>

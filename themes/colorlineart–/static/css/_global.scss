@@ -22,17 +22,109 @@ body {
 }
 
 /* ----- Typography ----- */
-h1 {
-    font-size: 60px;
-    position: fixed;
-    z-index: 3;
-    padding: 20px;
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/DMSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/DMSans-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'covik-sans', sans-serif; 
+    font-style: normal;
+    font-weight: 400;
+    @import url("https://use.typekit.net/hgw3osi.css");
+}
+
+@font-face {
+    font-family: 'covik-sans', sans-serif; 
+    font-style: normal;
+    font-weight: 700;
+    @import url("https://use.typekit.net/hgw3osi.css");
 }
 
 a {
     text-decoration: none;
     color: #000;
 }
+
+a:hover,
+.about:hover,
+.index:hover,
+.post-title:hover,
+.post-date:hover {
+    text-decoration: none;
+    background: linear-gradient(90deg, #E94545, #FE7B51, #8D77ED, #529BCE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 2s infinite linear;
+    cursor: pointer;
+ }
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+#weektitle {
+    font-family: 'covik-sans', sans-serif; 
+    font-weight: 700;
+    font-size: 3vw;
+}
+
+#weekdate {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+/* ----- Post Logo Header ----- */
+
+.logo-header {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    margin: 4vh 0 0 4vh;
+
+    #post-header {
+        width: 15vw;
+        background-image: url("/images/logo.svg");
+        background-repeat: no-repeat;
+        background-size: 15vw;
+        cursor: pointer;
+        width: 15vw;
+        height: 15vh;
+
+        &:hover {
+            background: linear-gradient(90deg, #E94545, #FE7B51, #8D77ED, #529BCE);
+            mask-image: url("/images/logo.svg");
+            -webkit-mask-image: url("/images/logo.svg");
+            -webkit-mask-size: 100%;
+            -webkit-mask-repeat: no-repeat;
+        }
+    }
+    
+    #em-dash {
+        height: 0.8vh;
+        width: 4vw;
+        background-color: #000;
+        border-radius: 8px;
+        margin-top: 10%;
+        margin-left: 1vw;
+    }
+}
+
 
 /* ----- Bottom Nav----- */
 .bottom-nav {
@@ -44,7 +136,9 @@ a {
     position: fixed;
     font-size: 24px;
 
-    div {
+    #index, #about {
+        font-family: 'covik-sans', sans-serif; 
+        font-weight: 400;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -102,6 +196,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
         .nav-post-image img {
             width: 20vh;
@@ -109,7 +204,18 @@ a {
             @media (max-width: $m-media) {
                 width: 15vh;
             }
-        }    
+        }
+        
+        .post-title {
+            font-family: 'covik-sans', sans-serif; 
+            font-weight: 700;
+            font-size: 26px;
+        }  
+        
+        .post-date {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+        }
     }
 
     /* ----- Nav ----- */

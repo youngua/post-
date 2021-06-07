@@ -4,8 +4,6 @@ date: "2021-01-21"
 image: "images/lineart30-grace.jpg"
 ---
 
-<!-- ![lineart30](/images/lineart30-grace.jpg) -->
-
 ## Grace
 I’mma drop this weird frankensteined creature looking unicorn here. Work has been stressful and I hope I can quickly move on with my career to an even better work situation.
 

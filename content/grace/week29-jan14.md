@@ -4,8 +4,6 @@ date: "2021-01-14"
 image: "images/lineart29-grace.jpg"
 ---
 
-<!-- ![lineart29](/images/lineart29-grace.jpg) -->
-
 ## Grace
 Once upon a time the fire nation attacked...and then there the airbender with the four elements was nowhere to be found. Then then, I stumbled upon an ice-ball in my freezer and cracked it in my ice-coffee. Then out of nowhere formed the last avatar. The Mystique creature with it’s all four elements conquered the fire nation and made everything perfect. I liked my ice-coffee cold after all. 
 

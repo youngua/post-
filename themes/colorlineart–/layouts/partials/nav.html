@@ -1,8 +1,11 @@
 <!-- Bottom nav -->
 <div class="bottom-nav">
-    <div id="index">Index</div>
-    <div id="about"><a href='{{ .Site.Params.about | relURL }}'>About</a></div>
+    <div id="index"><div class="index">Index</div></div>
+    <div id="about"><div class="about">About</div></div>
 </div>
+
+{{- partial "cover.html" . -}}
+{{- partial "about.html" . -}}
 
 <!-- Index Content when toggled -->
 <div id="index-content">
@@ -40,20 +43,21 @@
   
         </div>
 
+        <!-- Post title & Date -->
         <div class="col col-two">
 
             {{ range (where .Site.RegularPages "Type" "in" .Site.Params.minji) }}
 
             <div class="nav-post-container">
                 <div class="post-info">
-                    <div class="post-title">
-                        <a href="{{ .RelPermalink }}">
-                        {{ .Title | markdownify }}
-                        </a>
-                    </div>
-                    <div class="post-date">
-                        {{ .Date.Format "Jan 2, 2006" }}
-                    </div>
+                    <a href="{{ .RelPermalink }}">
+                        <div class="post-title">  
+                            {{ .Title | markdownify }}
+                            <div class="post-date">
+                                {{ .Date.Format "Jan 2, 2006" }}
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             {{ end }}

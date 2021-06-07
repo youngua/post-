@@ -4,8 +4,6 @@ date: "2021-01-14"
 image: "images/lineart28-grace.jpg"
 ---
 
-<!-- ![lineart28](/images/lineart28-grace.jpg) -->
-
 ## Grace
 I don’t know what I just drew, maybe they are cute monsters behind ghost cloak and mask. It is something whimsical I guess. Was also thinking about the little forest spirit from Princess Mononoke while drawing these fellows so I guess that was my main source of inspiration.  
 

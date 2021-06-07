@@ -6,14 +6,14 @@
 
     <!-- Weeks Info -->
     <div class="post-info">
-        <div class="post-title">
-            <h2>{{.Title}}</h2>
-        </div>
-        <div class="post-date">
-            <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
-        </div>
         <a href="/index.html">
-        <img id="left-arrow" src="/images/up-arrow-left-sm.png"/>
+            <div class="post-title">
+                {{.Title}}
+                <div class="post-date">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                </div>
+                <img id="right-arrow" src="/images/up-arrow-right-sm.png"/>
+            </div>
         </a>
     </div>
 
@@ -28,8 +28,8 @@
 
 
     <!-- bg graphics -->
-    <img id="top-purple" src="/images/top-purple.png" />
-    <img id="bottom-purple" src="/images/bottom-purple.png" />
-     
+    <img id="top-red" src="/images/top-red.png" />
+    <img id="bottom-red" src="/images/bottom-red.png" />
+
 </div>
 {{ end}}

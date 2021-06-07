@@ -2,9 +2,7 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        <a href="/index.html">
-            <h1>{{ .Site.Title }}</h1>
-        </a>
+        {{- partial "header.html" . -}}
 
         {{ block "main" . }}{{ end }}
 
