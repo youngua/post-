@@ -29,10 +29,10 @@
                     
             <!-- posting image from md content -->
             <div class="nav-post-container">
-                {{ if .Params.image }}
+                {{ if .Params.lineartImg }}
                 <div class="nav-post-image">
                     <a href="{{ .RelPermalink }}">
-                    <img src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+                    <img src="{{ .Params.lineartImg | relURL }}" alt="image" loading="lazy">
                     </a>
                 </div>
                 {{ end }} 
@@ -71,10 +71,10 @@
             <!-- posting image from md content -->
             <div class="nav-post-container">
                 
-                {{ if .Params.image }}
+                {{ if .Params.lineartImg }}
                 <div class="nav-post-image">
                     <a href="{{ .RelPermalink }}">
-                    <img src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
+                    <img src="{{ .Params.lineartImg | relURL }}" alt="image" loading="lazy">
                     </a>
                 </div>
                 {{ end }} 

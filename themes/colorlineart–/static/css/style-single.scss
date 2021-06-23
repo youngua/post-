@@ -5,12 +5,20 @@
     font-family: 'covik-sans', sans-serif; 
     font-weight: 700;
     font-size: 2vw;
+
+    @media (max-width: $m-media) {
+        font-size: 18px;
+    }
 }
 
 .post-date {
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 1vw;
+
+    @media (max-width: $m-media) {
+        font-size: 18px;
+    }
 }
 
 .content-container h2 {
@@ -23,6 +31,10 @@
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 1.2vw;
+
+    @media (max-width: $m-media) {
+        font-size: 16px;
+    }
 }
 
 #left-arrow:hover,
@@ -42,122 +54,316 @@
     100% { transform: translateX(0); }
 }
 
-.single-grace {
+/* ----- Post Word ----- */
+.post-word {
+    font-family: 'covik-sans', sans-serif; 
+    font-weight: 400;
+    position: absolute;
+    font-size: 5vw;
+    top: 1vh;
+    right: 4vh;
+    padding-left: 10px;
 
-    /* ----- Purple Graphics ----- */
+    width: auto;
+    height: auto;
+    background-image: url("../images/background-texture.jpg");
+    background-color: #E8EBB4;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    // margin: 4vh 0 0 4vh;
+
+    @media (max-width: $m-media) {
+        right: 0;
+        padding-right: 4vw;
+        margin-top: 2vh;
+        font-size: 8vw;
+    }
+}
+
+ /* ----- Post Image ----- */
+img[src$='#landscape'] {
+    width: 40vw;
+
+    @media (max-width: $m-media) {
+        width: 90vw;
+    }
+}
+
+img[src$='#portrait'] {
+    width: 30vw;
+
+    @media (max-width: $m-media) {
+        width: 90vw;
+    }
+}
+
+/* ----- Post Image ----- */
+.post-img {
+    display: block;
+
+    @media (max-width: $m-media) {
+        display: absolute;
+        top: 0;
+        margin: auto;
+    }
+}
+
+/* ----- Post Date ----- */
+.post-info {
+    text-align: center;
+    z-index: 3;
+    // border: 1px solid red;
+
+    span {
+        display: none;
+    }
+
+    @media (max-width: $m-media) {
+        margin: 25% 0 10% -20%;
+
+        span {
+            display: block;
+            padding: 0 2% 0 2%;
+        }
+
+        .single-post {
+            display: flex;
+        }
+    }
+}
+
+/* ----- Post Content ----- */
+.center-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: $m-media) {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* ----- Post Content Reference Images----- */
+img[src$='#reference'] {
+    padding-top: 10%;
+    width: 25vw;
+
+    @media (max-width: $m-media) {
+        width: 80vw;
+    }
+}
+
+/* ----- Single Grace ----- */
+
+#single-grace {
+    padding: 0 10vw 0 4vw;
+
+    @media (max-width: $m-media) {
+        padding: 20px;
+        flex-direction: column;
+    }
+}   
+
+/* ----- Post Date ----- */
+#left-arrow {
+    padding-top: 5%;
+    width: 25%;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    @media (max-width: $m-media) {
+        width: 14%;
+        padding-top: 0;
+        margin: 0 0 0 -86%;
+    } 
+}
+
+ // grace lineart graphic
+ img[src$='#lineart-grace'],
+ img[src$='#color-minji'] {
+     width: 4vw;
+     margin-left: -19%;
+     margin-top: 12px;
+     position: absolute;
+
+
+    @media (max-width: $m-media) {
+        width: 6vw;
+        margin-left: -12%;
+        margin-top: 6%;
+    }
+ }
+
+/* ----- Post Content ----- */
+.content-container {
+    overflow-y: scroll;
+    width: 30vw;
+    height: 100vh;
+    padding: 16vh 0 12vh 0;
+    // border: 1px solid red;
+
+    p {
+        padding-top: 2vh;
+    }
+
+    .content {
+        width: 25vw;
+        position: relative;
+        // border: 1px solid blue;
+        float: right;
+
+        @media (max-width: $m-media) {
+            width: 80vw;
+        }
+    }
+
+    @media (max-width: $m-media) {
+        overflow: auto;
+        width: 100vw;
+        height: auto;
+        padding: 30% 30px 20% 0;
+    }
+}
+
+/* ----- Purple Graphics ----- */
+.single-purple {
+
     #top-purple {
         position: fixed;
         top: -10%;
         left: 40vh;
         width: 50vh;
         z-index: -1;
-    }
 
+        @media (max-width: $m-media) {
+            position: absolute;
+            top: 10%;
+            left: 60%;
+            width: 40vh;
+        }
+    }
+    
     #bottom-purple {
         position: fixed;
         bottom: -5%;
         left: 5%;
         width: 50vh;
         z-index: -1;
-    }
 
-    /* ----- Post Image ----- */
-    .post-img {
-        height: 70%;
-        display: block;
-        position: fixed;
-        left: 15%;
-        top: 15%;
-    }
+        @media (max-width: $m-media) {
+            position: absolute;
+            bottom: 12%;
+            left: -5%;
+            width: 40vh;
+        }
+    }    
+}
 
-    /* ----- Post Date ----- */
-    .post-info {
-        position: fixed;
-        text-align: center;
-        top: 40%;
-        left: 5%;
-        z-index: 3;
-    }
+/* ----- Single Minji ----- */
+#single-minji {
+    padding: 0 4vw 0 10vw;
 
     #left-arrow {
-        padding-top: 5%;
-        width: 25%;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
+        display: none;
     }
 
-    // .bounce {
-    //     animation-name: bounce;
-    //     animation-timing-function: linear;
-    // }
-      
-    // @keyframes bounce {
-    //     0%   { transform: translateX(0); }
-    //     50%  { transform: translateX(-20px); }
-    //     100% { transform: translateX(0); }
-    // }
+    @media (max-width: $m-media) {
+        padding: 20px;
+        flex-direction: column-reverse;
 
-    /* ----- Post Content ----- */
-    .content-container {
-        position: absolute;
-        width: 25vw;
-        right: 8%;
-        margin-top: 10%;
+        #left-arrow {
+            display: block;
+        }
+    } 
+}
+
+/* ----- Squiggle Line ----- */
+.squiggle-line {
+    position: absolute;
+    top: 0.5%;
+    left: 18%;
+
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 0px;
+    animation: draw 5s linear;
+    height: 10vh;
+    width: 75vw;
+
+    @media (max-width: $m-media) {
+        left: 40%;
+    }
+}
+  
+  @keyframes draw {
+    from { stroke-dashoffset: 800px; }
+    to { stroke-dashoffset: 0px; }
+  }
+
+
+/* ----- Post Date ----- */
+#right-arrow {
+    padding-top: 5%;
+    width: 25%;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    @media (max-width: $m-media) {
+        display: none;
     }
 }
 
+/* ----- Post Content ----- */
 
-.single-minji {
+// minji lineart graphic
+img[src$='#lineart-minji'],
+img[src$='#color-grace'] {
+    width: 4vw;
+    margin-left: -20%;
+    margin-top: 4%;
+    position: absolute;
 
-    /* ----- Red Graphics ----- */
+    @media (max-width: $m-media) {
+        width: 6vw;
+        margin-left: -12%;
+        margin-top: 6%;
+    }
+}
+
+/* ----- Red Graphics ----- */
+.single-red {
+
     #top-red {
         position: fixed;
         top: 0;
         right: 40vh;
         width: 30vh;
         z-index: -1;
-    }
 
+        @media (max-width: $m-media) {
+            position: absolute;
+            top: 12%;
+            right: 0;
+            width: 20vh;
+        }
+    }
+    
     #bottom-red {
         position: fixed;
         bottom: 0;
-        right: 20%;
+        right: 10%;
         width: 80vh;
         z-index: -1;
-    }
 
-    /* ----- Post Image ----- */
-    .post-img {
-        height: 70%;
-        display: block;
-        position: fixed;
-        right: 15%;
-        top: 15%;
-    }
-
-    /* ----- Post Date ----- */
-    .post-info {
-        position: fixed;
-        text-align: center;
-        top: 40%;
-        right: 5%;
-        z-index: 3;
-    }
-
-    #right-arrow {
-        padding-top: 5%;
-        width: 25%;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-    }
-
-
-    /* ----- Post Content ----- */
-    .content-container {
-        position: absolute;
-        width: 25vw;
-        margin-left: 8%;
-        margin-top: 10%;
+        @media (max-width: $m-media) {
+            position: absolute;
+            bottom: 25%;
+            right: 50%;
+            width: 60vh;
+         }
     }
 }
 
@@ -193,13 +399,11 @@
         width: 55vw;
     }
 
-    .about-img {
-        img {
-            position: relative;
-            margin-top: 60px;
-            margin-right: 60px;
-            width: 20vw;
-        }
+    .about-img img {
+        position: relative;
+        margin-top: 60px;
+        margin-right: 60px;
+        width: 20vw;
     }
 
     .color-img img {
@@ -233,6 +437,29 @@
             top: 70%;
             right: 8%;
             width: 15vw;
+        }
+    }
+
+    @media (max-width: $m-media) {
+        // display: block;
+        padding: 20px;
+        font-size: 26px;
+        line-height: 40px;
+
+        #close-about {
+           width: 30px;
+           right: 20px;
+           top: 20px
+        }
+
+        p {
+            width: 80vw;
+        }
+
+        .about-img img {
+            position: relative;
+            margin: 30px 20px 30px 0;
+            width: 35vw;
         }
     }
 }
@@ -318,5 +545,8 @@
             width: 8vw;
         }
     }
-   
+
+    @media (max-width: $m-media) {
+        // display: block;
+    }
 }

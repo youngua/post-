@@ -1,35 +1,46 @@
 {{ define "main" }}
 <link rel="stylesheet" href="{{ `css/style-single.css` | absURL }}">
 
-<div class="single-grace">
+    <div class="center-content" id="single-grace">
 
-    <!-- Weeks Info -->
-    <div class="post-info">
-        <a href="/index.html">
-            <div class="post-title">
-                {{.Title}}
-                <div class="post-date">
-                    {{ .Date.Format "Jan 2, 2006" }}
+        <!-- Squiggle Line-->
+        <svg class="squiggle-line" width="1007" height="47" viewBox="0 0 1007 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 40.293C39.2234 45.6372 80.3593 25.7289 117.135 19.86C137.789 16.564 158.077 11.318 178.878 8.72582C182.451 8.28057 192.191 6.34733 195.49 9.09288C198.473 11.5755 198.952 16.3035 201.37 19.2482C206.627 25.6493 214.853 29.334 224.009 30.3824C268.27 35.45 312.968 20.5941 357.05 20.5941C366.719 20.5941 362.195 36.2816 368.811 41.6389C372.685 44.7766 379.11 41.9843 383.217 40.7824C403.759 34.7717 423.373 27.1214 443.49 20.227C464.937 12.877 487.458 6.50743 510.966 7.13522C520.35 7.38582 523.897 8.62501 524.638 16.4341C525.391 24.3784 525.074 32.3398 525.961 40.293C526.43 44.5036 526.084 47.5837 531.547 45.1259C551.319 36.231 571.715 28.2667 591.894 20.0435C607.494 13.6859 606 37 638.568 10.7728C646.824 7.32669 655.199 3.40201 664.221 1.47399C673.15 -0.434082 674.111 3.61879 674.364 10.0387C674.74 19.5728 674.528 28.7984 677.819 38.0577C679.965 44.0959 683.415 40.7189 691.197 42.9236C696.51 44.4291 702.924 43.3109 708.249 42.7401C720.945 41.3792 733.56 39.5646 746.177 37.7847C765.155 35.1076 784.557 32.34 803.877 32.34C808.256 32.34 811.238 32.3757 812.036 36.1941C814.267 46.8699 822.154 46.4859 833.646 44.7589C859.528 40.8694 885.81 34.3286 911.045 43.7801C922.504 48.0719 943.137 34.7811 952.06 29.9541C956.939 27.3148 961.433 24.4073 965.658 21.0835C966.678 20.2811 969.116 17.5283 968.672 18.6364C968.166 19.8995 950.912 45.9283 1006 39.3824" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <!-- Post Word -->
+        <div class="post-word">{{ .Params.postWd }}</div>
+
+        <!-- Weeks Info -->
+        <div class="post-info">
+            <a href="/index.html">
+                <div class="post-title single-post">
+                        {{.Title}}
+                        <span>/</span>
+                        <div class="post-date single-post">
+                            {{ .Date.Format "Jan 2, 2006" }}
+                        </div>
+                        <img id="left-arrow" src="/images/up-arrow-left-sm.png"/> 
                 </div>
-                <img id="left-arrow" src="/images/up-arrow-left-sm.png"/> 
+            </a>
+        </div>
+    
+        <!-- Post Image -->
+        <img class="post-img" src="{{ .Params.lineartImg | relURL }}" alt="image" loading="lazy">
+    
+        <!-- Contents -->
+        <div class="content-container">
+            <div class="content">
+                {{.Content}}
             </div>
-        </a>
+        </div>
+
     </div>
-
-    <!-- Contents -->
-
-    <div class="content-container">
-        {{.Content}}
-    </div>
-
-    <!-- Post Image -->
-    <img class="post-img" src="{{ .Params.image | relURL }}" alt="image" loading="lazy">
-
 
     <!-- bg graphics -->
-    <img id="top-purple" src="/images/top-purple.png" />
-    <img id="bottom-purple" src="/images/bottom-purple.png" />
-     
-     
-</div>
+    <div class="single-purple">
+        <img id="top-purple" src="/images/top-purple.png" />
+        <img id="bottom-purple" src="/images/bottom-purple.png" />
+    </div>
+
 {{ end}}

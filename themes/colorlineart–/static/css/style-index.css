@@ -13,6 +13,12 @@ html, body {
   overscroll-behavior: none;
 }
 
+@media (max-width: 900px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
 body {
   background-image: url("../images/background-texture.jpg");
   background-color: #E8EBB4;
@@ -76,18 +82,6 @@ a:hover,
   }
 }
 
-#weektitle {
-  font-family: 'covik-sans', sans-serif;
-  font-weight: 700;
-  font-size: 3vw;
-}
-
-#weekdate {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1.5vw;
-}
-
 /* ----- Post Logo Header ----- */
 .logo-header {
   position: fixed;
@@ -99,10 +93,9 @@ a:hover,
 }
 
 .logo-header #post-header {
-  width: 15vw;
   background-image: url("/images/logo.svg");
   background-repeat: no-repeat;
-  background-size: 15vw;
+  background-size: 100%;
   cursor: pointer;
   width: 15vw;
   height: 15vh;
@@ -117,9 +110,17 @@ a:hover,
   -webkit-mask-repeat: no-repeat;
 }
 
+@media (max-width: 900px) {
+  .logo-header #post-header {
+    width: 30vw;
+    height: 30vh;
+  }
+}
+
 .logo-header #em-dash {
-  height: 0.8vh;
-  width: 4vw;
+  display: none;
+  height: 0.6vh;
+  width: 5vh;
   background-color: #000;
   border-radius: 8px;
   margin-top: 10%;
@@ -154,7 +155,7 @@ a:hover,
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #E8EBB4;
-  outline: 2px solid black;
+  outline: 3px solid black;
   padding: 20px;
   cursor: pointer;
 }
@@ -162,6 +163,7 @@ a:hover,
 @media (max-width: 900px) {
   .bottom-nav #index, .bottom-nav #about {
     width: 50%;
+    padding: 8px;
   }
 }
 
@@ -225,13 +227,23 @@ a:hover,
   text-align: center;
 }
 
-#index-content .nav-post-container .nav-post-image img {
-  width: 20vh;
+#index-content .nav-post-container img[src$='#landscape'] {
+  width: 12vw;
 }
 
 @media (max-width: 900px) {
-  #index-content .nav-post-container .nav-post-image img {
-    width: 15vh;
+  #index-content .nav-post-container img[src$='#landscape'] {
+    width: 25vw;
+  }
+}
+
+#index-content .nav-post-container img[src$='#portrait'] {
+  width: 10vw;
+}
+
+@media (max-width: 900px) {
+  #index-content .nav-post-container img[src$='#portrait'] {
+    width: 20vw;
   }
 }
 
@@ -241,9 +253,16 @@ a:hover,
   font-size: 26px;
 }
 
+@media (max-width: 900px) {
+  #index-content .nav-post-container .post-title {
+    font-size: 22px;
+  }
+}
+
 #index-content .nav-post-container .post-date {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
+  font-size: 16px;
 }
 
 #index-content .topnav,
@@ -301,10 +320,48 @@ a:hover,
   width: 100%;
 }
 
+.weeks #weektitle {
+  font-family: 'covik-sans', sans-serif;
+  font-weight: 700;
+  font-size: 3vw;
+}
+
+.weeks #weekdate {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+
 @media (max-width: 900px) {
   .weeks {
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
+    top: 33%;
+  }
+  .weeks #weektitle {
+    font-size: 12vw;
+  }
+  .weeks #weekdate {
+    font-size: 6vw;
+  }
+}
+
+.tap-one {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .tap-one {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'covik-sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    position: fixed;
+    bottom: 10%;
+    margin: auto;
+    z-index: 3;
   }
 }
 
@@ -321,6 +378,7 @@ a:hover,
   #up-arrow,
   #down-arrow {
     left: 45vw;
+    height: 20vh;
   }
 }
 
@@ -332,7 +390,13 @@ a:hover,
   bottom: 24%;
 }
 
-/* ----- Images ----- */
+@media (max-width: 900px) {
+  #down-arrow {
+    bottom: 18%;
+  }
+}
+
+/* ----- Post Images ----- */
 .post-container {
   position: relative;
   height: 100vh;
@@ -347,24 +411,22 @@ a:hover,
           justify-content: center;
 }
 
+.post-container img[src$='#landscape'] {
+  width: 30vw;
+}
+
+.post-container img[src$='#portrait'] {
+  width: 24vw;
+}
+
 .post-container .post-image img {
-  width: 60vh;
   display: block;
   margin: auto;
 }
 
 @media (max-width: 900px) {
   .post-container .post-image img {
-    width: 50vh;
-  }
-}
-
-@media (max-width: 900px) {
-  .post-container .image-left {
-    margin-left: -200%;
-  }
-  .post-container .image-right {
-    margin-right: -200%;
+    width: 20vh;
   }
 }
 
@@ -412,6 +474,7 @@ a:hover,
 @media (max-width: 900px) {
   .leftside #bottom-red {
     left: -60%;
+    bottom: 6%;
     width: 60vh;
   }
 }

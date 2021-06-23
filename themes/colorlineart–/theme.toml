@@ -4,7 +4,7 @@ licenselink = "https://github.com/graceyoungminjikoo/post–/blob/master/LICENSE
 description = "A custom hugo theme for our coloring project"
 homepage = "https://github.com/youngua"
 tags = ["blog", "personal"]
-features = ["fun", "pop"]
+features = ["funsqiggles", "makeitpop"]
 min_version = "0.41.0"
 
 authors = [
