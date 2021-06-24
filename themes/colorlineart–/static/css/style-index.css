@@ -409,6 +409,9 @@ a:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 .post-container img[src$='#landscape'] {

@@ -1,4 +1,6 @@
-1. How to make the vector SVG animate?
+1. How to make the vector SVG animate? - SOLVED
     - did a hacky way where I set the backgroun of the post-wd div and I just have one version of the squiggle animating. I originally wanted different types of squiggle, but alas, I have to do one of the other base on the contraints. 
 2. How to make the Week date change when image is shown on Index page?
 3. How to make the page grow and expand to the single.html page?
+4. How to make index row -- scroll-snap-type: y mandatory; overflow-y: scroll;
+5. When you select the lineart - on single pg, you want to return to the index pg -- you should return to the same y position

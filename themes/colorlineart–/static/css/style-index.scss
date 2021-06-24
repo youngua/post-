@@ -87,6 +87,9 @@
     justify-content: center;
     // border: 1px solid red;
 
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
     img[src$='#landscape'] {
         width: 30vw;
     }
@@ -111,12 +114,14 @@
 
 /* ----- Split Screen ----- */
 .row {
+
     @media (max-width: $m-media) {
         overflow-x: clip;
     }
 }
 
 .col-md-6 {
+
     @media (max-width: $m-media) {
         width: 50%;
     }
